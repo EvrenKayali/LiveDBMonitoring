@@ -29,3 +29,13 @@ services:
       - ./zk-single-kafka-single/kafka1/data:/var/lib/kafka/data
     depends_on:
       - zoo1
+  db:
+    image: "microsoft/mssql-server-linux:2017-latest"
+    hostname: auditDb
+    environment:
+      SA_PASSWORD: "Your_password123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "5434:1433"
+    volumes:
+      - c:\data\mssql:/var/opt/mssql
