@@ -18,6 +18,8 @@ coverage
 .env.test.local
 .env.production.local
 
+zk-single-kafka-single
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
