@@ -42,10 +42,11 @@ namespace RealtimeAuditMonitor.TestProvider
 
             using (var c = new ConsumerBuilder<Ignore, string>(conf).Build())
             {
-                c.Subscribe("test-topic");
+                c.Subscribe("auditDb.dbo.Contact");
 
                 CancellationTokenSource cts = new CancellationTokenSource();
-                Console.CancelKeyPress += (_, e) => {
+                Console.CancelKeyPress += (_, e) =>
+                {
                     e.Cancel = true; // prevent the process from terminating.
                     cts.Cancel();
                 };
