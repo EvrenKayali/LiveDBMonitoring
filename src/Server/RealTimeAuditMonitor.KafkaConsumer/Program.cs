@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
-using System;
-using System.Threading.Tasks;
+﻿using System;
 using Confluent.Kafka;
+using Microsoft.AspNetCore.SignalR.Client;
 using System.Threading;
+using System.Threading.Tasks;
 
-namespace RealtimeAuditMonitor.TestProvider
+namespace RealTimeAuditMonitor.KafkaConsumer
 {
     class Program
     {
@@ -75,3 +75,4 @@ namespace RealtimeAuditMonitor.TestProvider
         }
     }
 }
+
