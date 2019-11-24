@@ -1,0 +1,18 @@
+{
+  "name": "audit-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+    "tasks.max": "1",
+    "database.server.name": "auditDb",
+    "database.hostname": "auditDb",
+    "database.port": "1433",
+    "database.user": "sa",
+    "database.password": "Your_password123",
+    "database.dbname": "AuditDB",
+    "database.history.kafka.bootstrap.servers": "broker:9092",
+    "database.history.kafka.topic": "schema-changes.audit",
+    "name": "audit-connector"
+  },
+  "tasks": [],
+  "type": "source"
+}
